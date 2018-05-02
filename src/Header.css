@@ -1,0 +1,14 @@
+
+.container {
+	position: absolute;
+  background-color: #FFF;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+	margin:	20px;
+  font-size: 2em;
+}
