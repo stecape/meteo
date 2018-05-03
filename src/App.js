@@ -7,7 +7,7 @@ class App extends Component {
     return (
     	<div className="app-container">
 	      <Header />
-	      <SearchTool />
+	      <SearchTool label='Enter a City and State'/>
       </div>
     )
   }

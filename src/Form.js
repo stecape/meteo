@@ -4,8 +4,8 @@ export default class Form extends Component {
   render() {
     return (
       <form className="content">
-      	<input type="text" placeholder="City, State"/>
-      	<input type="submit" value="Search"/>
+      	<input className="form-input" type="text" placeholder="City, State"/>
+      	<input className="form-button" type="submit" value="Get Weather"/>
       </form>
     )
   }
