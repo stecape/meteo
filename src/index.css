@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
-  background-color: orange;
+  background-color: lightgrey;
 }
 
 .header {
@@ -14,9 +14,28 @@ body {
   margin: 10px;
 }
 
+.container {
+  position: absolute;
+  background-color: #FFF;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
 #root, .app-container {
 	height: 100%
 }
+
+.form-button:focus {outline:0;}
 
 .form-button {
   background-color: #00ab10;
@@ -32,6 +51,17 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover:enabled {
+  background: linear-gradient(#00ab10,#00bb20);
+  color: #fff;
+  text-decoration: none;
+}
+
+.form-button:active {
+  transform: translateY(1px);
 }
 
 .form-input {
@@ -51,7 +81,7 @@ body {
   margin: 5px;
 }
 
-.search-tool-container { 
+.page-content { 
   width: 100%;
   height: 100%;
   display: flex;
