@@ -7,19 +7,16 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-    	<div className="app-container">
-	      <Header />
-				<BrowserRouter>
-					<div className="app-container">
-      			<Header />
-						<Switch>
-      				<Route exact path="/" render={() => {return <SearchTool label='Enter a City and State' />}} />
-      				<Route path="/forecasts" render={() => {return <Forecasts label='Enter a City and State' />}} />
-      				<Route render={() => {return <div className='page-content'>404 - Page not found</div>}} />
-						</Switch>
-					</div>
-				</BrowserRouter>
-      </div>
+			<BrowserRouter>
+				<div className="super-container">
+    			<Header/>
+					<Switch>
+    				<Route exact path="/" render={() => {return <SearchTool label='Enter a City and State' />}} />
+    				<Route path="/forecasts" render={() => {return <Forecasts />}} />
+    				<Route render={() => {return <div className='page-content'>404 - Page not found</div>}} />
+					</Switch>
+				</div>
+			</BrowserRouter>
     )
   }
 }

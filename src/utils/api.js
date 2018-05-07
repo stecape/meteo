@@ -1,10 +1,10 @@
 var axios = require('axios')
 
-var sec = "7cb902f2e13d31fbca92132c227948cd"
-var params = "?&APPID=" + sec
+var sec = "b714ec74bbab5650795063cb0fdf5fbe"
+var params = "APPID=" + sec
 
 function getWeather (location) {
-  return axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + location + params)
+  return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=' + location + '&type=accurate&' + params + '&cnt=5')
   .then(function (response) {
     return response
   })
