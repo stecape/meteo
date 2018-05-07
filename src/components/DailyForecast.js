@@ -4,7 +4,7 @@ export default class DailyForecast extends Component {
 	render(){
 		var data = this.props.data
 		return(
-      <ul>
+      <ul className="days-container">
         {data.map( day => {
           var image = window.location.origin + "/images/weather-icons/" + day.weather[0].icon + '.svg'
           var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -14,8 +14,8 @@ export default class DailyForecast extends Component {
           var _month = months[date.getMonth()]
           var _date = _day + ', ' + _month + ' ' + date.getDate()
         	return (
-        		<li key={day.dt}>
-              <img src={image} alt="Weather"/>
+        		<li className="days-content" key={day.dt}>
+              <img src={image} style={{'minHeight': '150px'}} alt="Weather"/>
               <h2>{_date}</h2>
         		</li>
         	)
